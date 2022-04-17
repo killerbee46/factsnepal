@@ -1,0 +1,89 @@
+.resources-section{
+    .resources-section-wrap{
+        .resources-title{
+            h3{
+                padding-bottom: 1.5rem;
+                @media only screen and (max-width: $lg-desktop){
+                    padding-bottom: 1.25rem;
+                }
+            }
+            @media only screen and (max-width: $lg-tab){
+                text-align: center;             
+            }
+        }
+        .resources-grid-content{
+            margin-top: 2.5rem;
+            @media only screen and (max-width: $lg-desktop){
+                margin-top: 2rem;
+            }
+            @media only screen and (max-width: $lg-tab){
+                margin-top: 0;
+            }
+            .grid-container{
+                .grid-col{
+                    margin-bottom: 40px;
+                    .grid-content-wrap{
+                        .grid-image{        
+                            img{
+                                width: 220px;
+                                @media only screen and (max-width: $lg-desktop){
+                                    width: 180px;
+                                }
+                                @media only screen and (max-width: $md-desktop){
+                                    width: 160px;
+                                }
+                            }
+                        }
+                        .grid-content{
+                            h4{
+                                margin-top: 1.172rem;
+                                line-height: 1.875rem !important;
+                            }
+                            .para-center{
+                                p{
+                                    margin-top: 1.25rem;
+                                    max-width: 275px;
+                                    @media only screen and (max-width: $lg-desktop){
+                                        margin-top: 1rem;
+                                    }
+                                    @media only screen and (max-width: $md-desktop){
+                                        margin-top: .785rem;
+                                    }
+                                }
+                            }
+                        }
+                        .grid-button{ 
+                            position: absolute;
+                            bottom: -10px;                           
+                            button{
+                                @include typo($font-family, 400, 1.25);
+                                @include button($color-red, $color-white);
+                                @include border-radius-circle(5px);
+                                @include border(1px, solid, $color-red);
+                                width: 90px;
+                                padding: 5px 0;
+                                font-size: .875rem;
+                                &:hover {
+                                    background: lighten($color-red, 40%);
+                                }
+                                &:nth-child(1){
+                                    margin-right: 15px;
+                                }
+                                @media only screen and (max-width: $md-desktop){
+                                    font-size: .75rem;
+                                }
+                            }
+                        }
+                    }
+                    @media only screen and (max-width: $lg-tab){
+                        margin-top: 3rem;
+                        .grid-content-wrap{
+                            @include flexvr;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

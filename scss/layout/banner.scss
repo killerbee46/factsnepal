@@ -1,0 +1,157 @@
+.banner{
+    background: linear-gradient($color-stop4, $color-stop2) !important;
+    position: relative;
+    .sphere1{
+        width: 30px;
+        height: 30px;
+        right: 11%;
+        top: 30%;
+    }
+    .sphere2{
+        width: 67.5px;
+        height: 67.5px;
+        left: 14%;
+        top: 50%;
+    }
+    .sphere3{
+        width: 100px;
+        height: 100px;
+        left: 62%;
+        bottom: -29%;
+        z-index: -1;
+    }
+    .sphere4{
+        width: 50px;
+        height: 50px;
+    }
+    &.contact-banner{
+        .banner-wrap{
+            padding-bottom: 0;
+            .title-block{
+                .title-wrap {
+                    .headline1 {
+                        margin-bottom: 1.125rem;
+                    }
+                    .headline5{
+                        margin-bottom: 0;
+                    }
+                }
+            } 
+        }
+    }
+    &.delievered-banner{
+        .banner-wrap{
+            min-height: calc(100vh - 54px);
+            @include flexcenter;
+            align-items: center;
+            .message-wrapper{
+            text-align: center;
+            background: darken($color-lightpink, 5%);
+            @include border-radius-circle(20px);
+            padding: 60px 100px;
+            .check-circle{
+                display: block;
+                &:before{
+                    content: "\f00c";
+                    font-family: 'FontAwesome';
+                    font-size: 40px;    
+                    @include border-radius-circle(50%);
+                    padding: 0.75rem;
+                    color: $color-red;
+                    background: linear-gradient(180deg, $color-formlabel, $color-borderpink);
+                
+                }
+            }
+            .message-box{
+                text-align: center;
+                margin-top: 3rem;
+                h4{
+                    font-weight: 500 !important;
+                    margin-bottom: 8px;
+                }
+            }
+            .ok-span{
+                text-transform: uppercase;
+                color: #ffffff;
+                margin-top: 2.5rem;
+                display: block;
+                font-size: 1.75rem;
+                font-weight: 700;
+                padding: .6rem 0;
+                background: $color-pink;
+                @include border-radius-circle(10px);
+                @include boxshadow(inset 0 0 2px $color-pinkgradient);
+
+            }
+        }
+        }
+        
+    }
+    &.is-bg{
+        @include flex;
+        align-items: flex-start;
+        height: 100vh;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+            background-image: url('.././img/main-header.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center bottom;
+            
+        }
+    }
+    .banner-wrap{
+        z-index: 11;
+        position: relative;
+        padding-bottom: 1.688rem;
+        text-align: center;
+        .title-block{
+            display: flex;
+            justify-content: center;
+            .title-wrap{
+                position: relative;
+                z-index: 1;
+                max-width: 900px;
+                @media only screen and (max-width: $lg-desktop){
+                    max-width: 700px;
+                }
+                @media only screen and (max-width: $md-desktop){
+                    max-width: 550px;
+                }
+                .headline1{
+                    margin-bottom: 1.5rem;
+                    @media only screen and (max-width: 1560px){
+                        margin-bottom: 1.25rem;
+                    }
+                }
+                .headline5{
+                    margin-bottom: 4.375rem;
+                }
+            }
+        }
+        img{
+            width: 630px;
+        }
+        &.fact-banner-wrap{
+            padding-bottom: 0;
+            .title-block{
+                .title-wrap{
+                    .headline5{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+

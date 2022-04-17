@@ -1,0 +1,462 @@
+.form-bg{
+    background: $color-lightpink !important;
+    @include border-radius-circle(10px);
+    padding-left: 122px;
+    padding-right: 92px;
+}
+.sphere-gradient1{
+    opacity: 0.15;
+    background: linear-gradient(180deg , $color-pink 0%, $color-lgpinkgrad 53%, $trans-white 100%);
+}
+.sphere-gradient2{
+    background: rgba($color: $color-red, $alpha: 0.4);
+}
+.sphere-gradient3{
+    background: rgba($color: $color-formlabel, $alpha: 0.12);
+}
+
+.form-section{
+    @include linear-gradient-footer(180deg, $color-formlabel,$color-darkred);
+    &.contact-form{
+        background: none !important;
+        .form-left{
+            .form-left-title{
+                h3{
+                    color: $color-primary !important;
+                }
+                span{
+                    color: $color-primary !important;
+                }
+            }
+            .form-wrap { 
+                form{
+                    .form-group{
+                        .form-control{
+                            border-bottom-color: $color-grey;
+                            ~label{
+                                color: $color-grey;
+                            }
+                            ~.border-span{
+                                background-color: $color-pink;
+                            }
+                            &:focus,
+                            &:valid{
+                                color: $color-pink;
+                                ~label{
+                                    color: $color-pink; 
+                                }
+                            }
+                        }
+                    } 
+                    .btn{
+                        background: $color-red;
+                        margin-bottom: 0;
+                    }
+                }
+            }  
+        }
+        .form-right{
+            .form-right-title {
+                h3{
+                    color: $color-primary !important;
+                }
+            }
+            .form-address {
+                .addr-list {
+                    &:first-child{
+                        .addr{
+                            span{
+                                max-width: 360px;
+                            }
+                        }
+                    }
+                    .addr{
+                        span{
+                            max-width: 360px;
+                            color: $color-primary !important;
+                        }
+                    }
+                }
+                a{
+                    @include animate;
+                    color: $color-primary !important;
+                    &:hover{
+                        color: $color-pink !important;
+                    }
+                }
+            }  
+            .form-btn-wrap{
+                span{
+                    color: $color-red !important;
+                }
+            } 
+        } 
+        .footer{
+            padding-left: 122px;
+            padding-right: 92px;
+            margin: 26px 0;
+            .footer-left{
+                .copyright{
+                    color: $color-grey !important;
+                    .subtitle{
+                        color: $color-grey !important;
+                        font-weight: 500 !important;
+                    }
+                }
+            } 
+            .footer-right{
+                padding-left: 0; 
+                @include flex_end;
+                .site-design-title{
+                    color: $color-grey !important;
+                    .site-design{
+                        color: $color-grey !important;
+                        font-weight: 500 !important;
+                    }
+                }
+            }
+        } 
+    }
+    .form-left{
+        .form-left-title{
+            position: relative;
+            @media only screen and (max-width: $lg-tab){
+                text-align: center;
+            }
+            .form-sphere{
+                width: 105px;
+                height: 105px;
+                left: -13%;
+                top: -48%;
+            }
+            h3{
+                color: $color-white !important;
+                margin-bottom: 20px;
+                @media only screen and (max-width: $md-desktop){
+                    margin-bottom: 10px;
+                }
+            }
+            span{
+                color: $color-white !important;
+            }
+        }
+        .form-wrap{
+            margin-top: 40px;
+            @media only screen and (max-width: $lg-desktop){
+               margin-top: 30px;
+            }
+            form{
+                @media only screen and (max-width: $lg-tab){
+                    text-align: center;
+                }
+                .form-group{
+                    position: relative;
+                    width: 100%;
+                    margin-bottom: 25px;
+                    &:nth-child(4){
+                        margin-bottom: 0;
+                    }
+                    .form-control{
+                        font-size: 1.125rem;
+                        position: relative;
+                        cursor: pointer;
+                        color: $color-formlabel;
+                        padding: 2px 0px;
+                        background-color: transparent;
+                        outline: none;
+                        border: none;
+                        @include border-bottom(1px, solid, $color-formlabel);
+                        @include border-radius-circle(0px);
+                        @media only screen and (max-width: $lg-desktop){
+                            font-size: 1rem;
+                        }
+                        @media only screen and (max-width: $md-desktop){
+                            font-size: .875rem;
+                        }
+                        ~label{
+                            @include typo($font-family, 400, 1.5);
+                            @include transition($transition: all 0.4s ease-in);
+                            font-size: 1.125rem;
+                            color: $color-formlabel;
+                            position: absolute; 
+                            left: 0;
+                            top: 0px; 
+                            @media only screen and (max-width: $lg-desktop){
+                                font-size: 1rem;
+                            }
+                            @media only screen and (max-width: $md-desktop){
+                                font-size: .875rem;
+                            }
+                        }
+                        ~.border-span{
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 0;
+                            height: 1px;
+                            background-color: $color-white;
+                            transition:all 0.5s linear;
+                        }
+                        &:focus,
+                        &:valid{
+                            color: $color-white;
+                            box-shadow: none;
+                            outline: none;
+                            ~label{
+                                top: -10px; 
+                                color: $color-white; 
+                                transform: translate(-20%, -40%) scale(0.6);
+                            }
+                            ~.border-span{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                    
+                .btn{
+                    margin-top: 60px;
+                    padding: 10px 50px;
+                    margin-bottom: 40px;
+                    font-size: 0.75rem;
+                    @include btn($color-white, $color-formred);
+                    @include border(1px, solid, $color-white);
+                    @include typo($font-family, 400, 1.5);
+                    @include border-radius-circle(5px);
+                    &:hover{
+                        font-weight: 500;
+                        background: lighten($color-formred, 65%);
+                        color: $color-red;
+                        @include border(1px, solid, lighten($color-red, 20%));
+                        box-shadow: 0px 15px 30px $btn-shadow;
+                    }
+                    @media only screen and (max-width: $md-desktop){
+                        padding: 8px 40px;
+                        font-size: 0.625rem;
+                    }
+                }
+            }
+        }
+    }
+    .form-right{
+        @media only screen and (max-width: $lg-tab){
+            @include flexvr;
+        }
+        .form-right-title{
+            position: relative;
+            .form-circle{
+                width: 18px;
+                height: 18px;
+                top: -85%;
+                left: 40%;
+            }
+            h3{
+                color: $color-white !important;
+                margin-bottom: 20px;
+                @media only screen and (max-width: $md-desktop){
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        .form-address{
+            margin-top: 24px;
+            .addr-list{
+                .addr{
+                    &:first-child{
+                        span{
+                            &:last-child{
+                                max-width: 360px;
+                            }
+                        }
+                    }
+                    @include flex;
+                    margin-bottom: 20px;
+                    @media only screen and (max-width: $lg-desktop){
+                        margin-bottom: 15px;
+                    }
+                    @media only screen and (max-width: $md-desktop){
+                        margin-bottom: 10px;
+                    }
+                    span{
+                        color: $color-white !important;
+                        display: block;
+                        &:nth-child(1){
+                           flex: 0 0 24px;
+                            max-width: 24px; 
+                            @media only screen and (max-width: $lg-desktop){
+                                flex: 0 0 20px;
+                                max-width: 20px;
+                            }
+                            @media only screen and (max-width: $md-desktop){
+                                flex: 0 0 18px;
+                                max-width: 18px;
+                            }
+                        }
+                        
+                        &:nth-child(2){
+                            margin-left: 15px;
+                        }
+                    }
+                }
+                @media only screen and (max-width: $lg-tab){
+                   @include flexvr;
+                   .addr{
+                        &:first-child{
+                            span{
+                                &:last-child{
+                                    max-width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            a{
+                color: $color-white !important;
+                &:hover{
+                    color: darken($color-white, 20%);
+                }
+            }   
+        }
+        .form-btn-wrap{
+            padding-top: 40px;
+            position: relative;
+            .form-sphere{
+                width: 67px;
+                height: 67px;
+                right: 9%;
+                top: 44%;
+            }
+            span{
+                color: $color-pink !important;
+            }
+            .btn-content{
+                margin-bottom: 60px;
+                padding-top: 20px;
+                @include flex;
+
+                @media only screen and (max-width: $lg-desktop){
+                    padding-top: 15px;
+                }
+                @media only screen and (max-width: $lg-tab){
+                    @include flexcenter;
+                }
+                a{
+                    display: inline-block;
+                    cursor: pointer;
+                    &:nth-child(1){
+                        img{
+                            width: 150px;
+                            @media only screen and (max-width: $lg-desktop){
+                                width: 120px;
+                            }
+                            @media only screen and (max-width: $md-desktop){
+                                width: 100px;
+                            }
+                        }
+                        margin-right: 12px;
+                    }
+                    &:nth-child(2){
+                        img{
+                            width: 113px;
+                        }
+                        margin-right: 0px;
+                    }
+                }
+                
+            }
+        }
+        .social-icon-wrap{
+            @include flex;
+            a{
+                display: inline-block;
+                margin-right: 15px;
+                &:nth-child(5){
+                    margin-right: 0;
+                }
+                &:nth-child(1){
+                    figure{
+                        img{
+                            width: 9px;
+                            @media only screen and (max-width: $lg-desktop){
+                                width: 7px;
+                            }
+                        }
+                    }
+                }
+                figure{
+                    @include flexcenter;
+                    align-items: center;
+                    background: $logo-bg;
+                    width: 38px;
+                    height: 38px;
+                    @include border-radius-circle(50%);
+                    box-shadow: 0px 10px 30px $color-box-shadow;
+                    transition: all 0.4s ease-in;
+                    outline: none;
+                    @media only screen and (max-width: $lg-desktop){
+                        width: 35px;
+                        height: 35px;
+                    }
+                    @media only screen and (max-width: $md-desktop){
+                        width: 30px;
+                        height: 30px;
+                    }
+                    img{
+                        width: 18px;
+                        @media only screen and (max-width: $lg-desktop){
+                            width: 15px;
+                        }
+                    }
+                    &:hover{
+                        background: lighten($logo-bg, 20%);
+                    }
+                }
+            }
+        }
+    }
+
+    // footer
+    .footer{
+        margin-top: 50px;   
+        @media only screen and (max-width: $md-desktop){
+            margin-top: 30px;
+        }
+        .footer-left{
+            position: relative;
+            .form-sphere{
+                width: 23px;
+                height: 23px;
+                left: -14%;
+                bottom: -92%;
+            }
+            .copyright{
+                color: $color-formlabel;
+                .subtitle{
+                    color: $color-pink;
+                }
+            }
+            @media only screen and (max-width: $lg-tab){
+                text-align: center;
+                padding-top: 2rem;
+            }
+        }
+
+        .footer-right{
+            padding-left: 135px;
+            .site-design-title{
+                color: $color-formlabel;
+                .site-design{
+                    color: $color-pink;
+                }
+            }
+            @media only screen and (max-width: $lg-tab){
+                text-align: center;
+                padding-left: 0;
+                padding-top: 3px;
+            }
+        }
+    }
+
+}

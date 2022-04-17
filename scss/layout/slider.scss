@@ -1,0 +1,57 @@
+.page{
+    .slider-section{
+        @include linear-gradient(180deg, $color-stop3, $color-stop2);
+        .caption{
+            text-align: left;
+            display: block;
+        }
+        .slider{
+            @include border-bottom(1px, solid, $color-borderbtm);
+            margin-top: 2.531rem;
+            .slider-image-container{
+                .slider-img-item{
+                    &:focus{
+                        outline: none !important;
+                    }
+                    figure{
+                        @include flexcenter;
+                        align-items: center; 
+                        flex: 1 0 300px;
+                        max-width: 300px;
+                        img{
+                            width: 100%;
+                            height: 100px;
+                            object-fit: contain;
+                            object-position:center center;
+                        }
+                    }
+                }
+                .img-scale00{
+                    figure{
+                        img{
+                            transform: scale(0.9);
+                        }
+                    }
+                }
+                .img-scale02{
+                    figure{
+                        img{
+                            transform: scale(0.8);
+                        }
+                    }
+                }
+                .img-scale03{
+                    figure{
+                        img{
+                            transform: scale(0.7);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+

@@ -1,0 +1,160 @@
+.page{
+    .general-info{
+        position: relative;
+        .sphere1{
+            width: 67px;
+            height: 67px;
+            position: absolute;
+            left: -20px;
+            top: 45%;
+        }
+        background: rgba($color-pink, .2);
+        .general-info-wrap{
+            position: relative;
+            @include flex;
+            h3.headline2{
+                padding-bottom: 3rem;
+                @media only screen and (max-width: $lg-desktop){
+                    padding-bottom: 2.5rem;
+                }
+               
+            }
+           
+            .sphere2{
+                width: 110px;
+                height: 110px;
+                position: absolute;
+                top: 60%;
+                right: -80px;
+                @media only screen and (max-width: $md-desktop){
+                    right: -50px;
+                }
+                @media only screen and (max-width: $md-tab){
+                    right: 0;
+                }
+            }
+            .sphere3{
+                width: 29px;
+                height: 29px;
+                opacity: 0.2;
+                position: absolute;
+                top: -50px;
+                right: -150px;
+                @media only screen and (max-width: 1440px){
+                    right: 0px;
+                }
+            }
+            .sphere4{
+                width: 50px;
+                height: 50px;
+                opacity: 0.15;
+                position: absolute;
+                right: 60%;
+                bottom: -40px;
+            }
+            .fact-info-wrap, .public-poll-info-wrap{
+                height: 100%;
+                @media only screen and (max-width: $lg-tab){
+                    margin-bottom: 50px;
+                    height: auto;
+                    text-align:center;
+                }
+            }
+
+            .public-poll-info-wrap{
+                @media only screen and (max-width: $lg-tab){
+                    margin-bottom: 0;
+                }
+            }
+
+            .poll-link{
+                display: block;
+                width: 100%;
+                height: calc(100% - 25%);
+            }
+            .fact-info{
+                height: 100%;
+                @include flex;
+                background: $color-white;
+                @include border-radius-circle(10px);
+                padding: 2.813rem 2.5rem;
+                @media only screen and (max-width: $mb-xl ){
+                    height: auto;
+                }
+                .fact-info-img{
+                    height: 100%;
+                    figure{
+                        margin-bottom: 0rem !important;
+                        height: 100%;
+                        width: 100%;
+                        img{
+                           width: 100%;
+                           height: 100%;
+                           object-fit: cover;
+                        }
+                    }
+                }
+                .fact-info-content{
+                    height: 100%; 
+                    .fact-info-content-wrap{
+                        .center{
+                            @media only screen and (max-width: $lg-tab){
+                                margin-top: 1.5rem;
+                            }
+                            span{
+                                display: block;
+                            }
+                            p{
+                                @include line-clamp(4);
+                                max-width: 345px;
+                                margin: 1.25rem 0;
+                                @media only screen and (max-width: $md-desktop){
+                                    margin: 1rem auto;
+                                }
+                            }
+                        }
+                    }
+                }
+            } 
+
+            .public-poll-info{
+                background: $color-white;
+                height: 100%;
+                @include border-radius-circle(10px);
+                .public-poll-flexcenter{
+                    padding: 2.344rem 2.5rem;
+                    span{
+                        display: block;
+                    }
+                    h6{
+                        max-width: 300px;
+                        margin: 1.25rem 0;
+                        font-size: 1.325rem;
+                        line-height: 1.75rem;
+                        @media only screen and (max-width: $lg-desktop){
+                            font-size: 1.125rem;
+                            line-height: 1.5rem;
+                        }
+                        @media only screen and (max-width: $md-desktop){
+                            font-size: .938rem;
+                            line-height: 1.25rem;
+                        }
+                        @media only screen and (max-width: $lg-tab){
+                           max-width: 100%;
+                        }
+                    }
+                    .btn-vote{
+                        font-size: .688rem;
+                        margin-top: 1.594rem;
+                        padding: .328rem 1.266rem;
+                        color: $color-red;
+                        background: $color-white;
+                        @include typo($font-family, 400, 1.5);
+                        @include border(1px, solid, $color-red);
+                        @include border-radius-circle(18px);
+                    }
+                }
+            } 
+        }
+    }
+}

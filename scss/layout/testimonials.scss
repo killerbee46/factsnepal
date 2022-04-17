@@ -1,0 +1,91 @@
+.page{
+    .testimonials-section{
+        background: $color-footer;
+        padding: 0px;
+        .testimonials-title{
+            text-align: left;
+            margin-bottom: 82px;
+            h3{
+                @include typo($font-family, 300, 1.5);
+                color: $color-primary;
+                padding-top: 20px;
+                @media only screen and (max-width: $lg-tab){
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .testimonials-content{
+        @include flex;
+        justify-content: center;
+        .testimonials-content-center{
+            position: relative;
+            max-width: 60%;
+            .para-wrap{
+                .quote-img{
+                    position: absolute;
+                    top: 0px;
+                    right: -20px;
+                    width: 30px;
+                    height: 21px;
+                    @media only screen and (max-width: $lg-desktop){
+                        right: -80px;
+                    }
+                    @media only screen and (max-width: $md-desktop){
+                        right: -60px;
+                        width: 22px;
+                         height: 14px;
+                    }
+                }
+                .factsNepal-subtitle{
+                    margin-bottom: 51px;
+                }
+                .span-testimonials-wrap{
+                    margin-bottom: 20px;
+                    @media only screen and (max-width: $md-desktop){
+                        margin-bottom: 15px;
+                    }
+                    .testimonial-name{
+                        @include typo($font-family, 600, 1.5);
+                        font-size: 0.938rem;
+                        color: $color-red;
+                        display: block;
+                        font-weight: 500;
+                        @media only screen and (max-width: $lg-desktop){
+                            font-size: .785rem;
+                        }
+                        @media only screen and (max-width: $md-desktop){
+                            font-size: .685rem;
+                        }
+                    }
+                    .testimonial-position{
+                        @include typo($font-family, 600, 1.5);
+                        font-size: 0.75rem;
+                        color: $color-grey;
+                        font-weight: 300;
+                        @media only screen and (max-width: $lg-desktop){
+                            font-size: .625rem;
+                        }
+                        @media only screen and (max-width: $md-desktop){
+                            font-size: .585rem;
+                        }
+                    }
+                }
+                .testimonial-slider-item{
+                    img{
+                        width: 120px;
+                        @media only screen and (max-width: $md-desktop){
+                            width: 100px;
+                        }
+                    }
+                }
+            }
+            
+            .testimonial-slider{
+                margin-top: 20px;
+                width: 20%;
+                margin-left: -16px;
+            }
+        }
+    }
+}
