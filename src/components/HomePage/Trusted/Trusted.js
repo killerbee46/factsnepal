@@ -70,6 +70,21 @@ export default class Trusted extends Component {
       ]
     };
     const { trusted, slider } = this.state;
+
+    const data = [
+      {image:"https://upload.wikimedia.org/wikipedia/commons/1/1e/RPC-JP_Logo.png"},
+      {image:"https://upload.wikimedia.org/wikipedia/commons/1/1e/RPC-JP_Logo.png"},
+      {image:"https://upload.wikimedia.org/wikipedia/commons/1/1e/RPC-JP_Logo.png"},
+      {image:"https://upload.wikimedia.org/wikipedia/commons/1/1e/RPC-JP_Logo.png"},
+      {image:"https://upload.wikimedia.org/wikipedia/commons/1/1e/RPC-JP_Logo.png"},
+      {image:"https://upload.wikimedia.org/wikipedia/commons/1/1e/RPC-JP_Logo.png"},
+      {image:"https://upload.wikimedia.org/wikipedia/commons/1/1e/RPC-JP_Logo.png"},
+      {image:"https://upload.wikimedia.org/wikipedia/commons/1/1e/RPC-JP_Logo.png"},
+      {image:"https://upload.wikimedia.org/wikipedia/commons/1/1e/RPC-JP_Logo.png"},
+      {image:"https://upload.wikimedia.org/wikipedia/commons/1/1e/RPC-JP_Logo.png"},
+      {image:"https://upload.wikimedia.org/wikipedia/commons/1/1e/RPC-JP_Logo.png"},
+      {image:"https://upload.wikimedia.org/wikipedia/commons/1/1e/RPC-JP_Logo.png"},
+    ]
     return (
       <section
         className={`${
@@ -77,12 +92,12 @@ export default class Trusted extends Component {
         }`}
       >
         <div className="container">
-          <span className="caption">Our Clients & Partners</span>
+          <span className="caption text text--normal">Our Clients & Partners</span>
           <div className="slider pdb-115">
             <div className="slider-image-container">
               <Slider {...settings}>
-                {trusted &&
-                  trusted.map((data, key) => {
+                {data &&
+                  data.map((data, key) => {
                     return (
                       <div className="slider-img-item ">
                         <figure>

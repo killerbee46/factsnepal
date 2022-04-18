@@ -1,13 +1,11 @@
 import React, { Component, Fragment } from "react";
 import MobileAppDownloads from "../components/HomePage/MobileAppDownloads/MobileAppDownloads";
 import Slider from "react-slick";
-import NavBar from "../components/NavBar/NavBar";
 import axios from "axios";
 import ErrorBoundary from "../components/ErrorBoundary";
 import { Link } from "react-router-dom";
 import TimeAgo from "react-timeago";
 import SliderItem from "../components/AllFacts/SliderItem";
-import Footer from "../components/Footer/Footer";
 
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";

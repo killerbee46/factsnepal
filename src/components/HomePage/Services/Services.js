@@ -61,7 +61,7 @@ class Services extends Component {
                           Research & <br></br> Data Analysis
                         </h4>
                         <div className="para-center">
-                          <p className="body-para">
+                          <p className="body-para text text--normal">
                             Analyzing data in quantitative and qualitative
                             Research
                           </p>
@@ -95,7 +95,7 @@ class Services extends Component {
                           Strategy & <br></br> Development
                         </h4>
                         <div className="para-center">
-                          <p className="body-para">
+                          <p className="body-para text text--normal">
                             Planning, creation, delivery and governance of
                             content
                           </p>
@@ -129,7 +129,7 @@ class Services extends Component {
                           Infographics <br></br> Design
                         </h4>
                         <div className="para-center">
-                          <p className="body-para">
+                          <p className="body-para text text--normal">
                             Supplying you with relevant of information in
                             graphic
                           </p>

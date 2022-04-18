@@ -25,7 +25,7 @@
     position: absolute;
     top: 50%;
 
-    display: none;
+    display: none ;
 
     width: 30px;
     height: 30px;
@@ -123,7 +123,7 @@
     position: absolute;
     bottom: -25px;
 
-    display: block;
+    display: none !important;
 
     width: 100%;
     padding: 0;
@@ -151,7 +151,7 @@
     font-size: 0;
     line-height: 0;
 
-    display: none;
+    display: none !important;
 
     width: 20px;
     height: 20px;
