@@ -21,3 +21,15 @@
     background: #9f2f36!important;
     color: #fff!important;
 }
+
+.service-menu{
+    &:hover{
+        .submenu{
+            display: block;
+        }
+    }
+    .submenu{
+        display: none;
+    }
+    
+}

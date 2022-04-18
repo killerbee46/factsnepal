@@ -31,12 +31,39 @@ class NavBar extends Component {
     const headerBg = location && location.pathname && location.pathname.includes('/facts/') || location.pathname.includes('/publicpoll/') ? true : false;
     const { siteapi } = this.props;
     const menu = [
-      { title:"Home", path:"/"},
-      { title:"Services",path:'/services'},
-      { title:"Projects", path:"/projects"},
-      { title:"Infographics", path:"/allfacts"},
-      { title:"About", path:"/about"},
-      { title:"Contact", path:"/contact"},
+      { title: "Home", path: "/" },
+      {
+        title:
+          <div className="service-menu">
+            Services
+            <div class="card card-body submenu" style={{ background: 'transparent', border: 'none', height: '100px', padding: '12px' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
+                <a href="/researchdata">Research & Data Analysis</a>
+                <a href="/strategycontent">Strategy & Content Development </a>
+                <a href="/infographics">Infographics Designs</a>
+              </div>
+            </div>
+          </div>
+        // <div><p>
+        //   <a data-toggle="collapse" href="#subService" aria-expanded="false" aria-controls="subService">
+        //     Services &nabla;
+        //   </a>
+        // </p>
+        // <div class="collapse" id="subService">
+        //   <div class="card card-body" style={{background:'transparent',border:'none',height:'100px',padding:'12px'}}>
+        //     <div style={{display:'flex',flexDirection:'column',justifyContent:'space-between',height:'100%'}}>
+        //       <a href="/researchdata">Research & Data Analysis</a>
+        //       <a href="/strategycontent">Strategy & Content Development </a>
+        //       <a href="/infographics">Infographics Designs</a>
+        //     </div>
+        //   </div>
+        // </div></div>
+        , path: '#'
+      },
+      { title: "Projects", path: "/projects" },
+      { title: "Infographics", path: "/allfacts" },
+      { title: "About", path: "/about" },
+      { title: "Contact", path: "/contact" },
     ]
     return (
       <React.Fragment>
@@ -83,12 +110,12 @@ class NavBar extends Component {
                   <span></span>
                   <span></span>
                 </div>
-                <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse container" id="navbarNav">
                   <ul class="navbar-nav">
-                    {menu?.map((data)=> {
+                    {menu?.map((data) => {
                       return <li class="nav-item">
-                      <a class="nav-link" href={data?.path}>{data?.title}</a>
-                    </li>
+                        <a class="nav-link" href={data?.path}>{data?.title}</a>
+                      </li>
                     })}
                   </ul>
                 </div>
